@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="INST_377_Lab_4_css.css">
+</head>
+
+<body>
+    <h1 id="page-heading">INST 377 - Lab 4</h1>
+    <div class='parent'>
+        <div class='child inline-block-child'>
+            <section id="alert-me-section">
+                <form id="alert-form">
+                    <label for="name">Enter your name: </label>
+                    <input type="text" id="name" required>
+                    <button type="button" onclick="alertMe()">Alert Me</button>
+                </form>
+            </section>
+        </div>
+        <div class='child inline-block-child'>
+
+            <section id="change-color-section">
+                <form id="color-form">
+                    <button type="button" onclick="changeColor()">Change Color</button>
+            </section>
+        </div>
+    </div>
+    <div class='parent'>
+        <div class='childe inline-block-child'>
+            <section id="text-tester-section">
+                <form id="text-form">
+                    <label for="text">Enter text: </label>
+                    <input type="text" id="text-input" required>
+                    <button type="button" onclick="textTester()">Validate Text</button>
+                </form>
+            </section>
+        </div>
+        <div class='child inline-block-child'>
+
+            <section id="add-text-section">
+                <button type="button" onclick="addText()">Add Text</button>
+            </section>
+        </div>
+
+    </div>
+
+    <script>
+        function alertMe() {
+            var name = document.getElementById("name").value;
+            if (name) {
+                alert("Hello, " + name + "!");
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+
+        let currentColor = 'blue';
+        function changeColor() {
+            if (currentColor === 'blue') {
+                document.body.style.backgroundColor = 'red';
+                currentColor = 'red';
+            } else {
+                document.body.style.backgroundColor = 'blue';
+                currentColor = 'blue';
+            }
+        }
+
+        function textTester() {
+            var text = document.getElementById("text-input").value;
+            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (validation.test(text)) {
+                alert("Special characters are not allowed.");
+            } else {
+                alert("Text is valid.");
+            }
+        }
+
+        function addText() {
+            var heading = document.getElementById("page-heading");
+            heading.innerText = "INST 377 - Lab 4 - Added Text";
+        }
+    </script>
+</body>
+
+</html>

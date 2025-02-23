@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-color: blue
+}
+
+section {
+    background-color: purple;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 3px solid green;
+    width: 300 px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+}
+
+.inline-block-child {
+    display: inline-block;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-top: 10px 0;
+    font-size: 16px;
+}
+
